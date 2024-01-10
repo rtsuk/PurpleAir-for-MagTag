@@ -195,9 +195,9 @@ try:
     value = response.json()
     results = value['sensor']
     time_stamp = value['time_stamp'] + (int(timezone_offset)*60*60)
-except (ConnectionError, ValueError, RuntimeError) as e:
-    print("Some error occured, retrying in 10 seconds -", e)
-    magtag.exit_and_deep_sleep(10)
+except:
+    print("Some error occured, retrying in 60 seconds -", e)
+    magtag.exit_and_deep_sleep(60)
 
 last_seen = results['last_seen'] + (int(timezone_offset)*ONE_HOUR)
 data_age = time_stamp - last_seen
