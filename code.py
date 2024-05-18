@@ -87,7 +87,7 @@ else:
 big_font = bitmap_font.load_font("/fonts/SourceSansPro-Black-70.bdf")
 medium_font = bitmap_font.load_font("/fonts/SourceSansPro-Bold-20.bdf")
 small_font = bitmap_font.load_font("/fonts/SourceSansPro-SemiBold-18.bdf")
-main_group = displayio.Group(max_size=7)
+main_group = displayio.Group()
 margin = 10
 
 # white background. Scaled to save RAM
